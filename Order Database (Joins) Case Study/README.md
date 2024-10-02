@@ -1,6 +1,6 @@
 # Order Data Base Case Study
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/8f433710-2c86-4d38-bee8-ff0de7b0fade)
+![case_study_diagram](https://github.com/user-attachments/assets/d41437c2-6579-4c76-a1e8-343a0b5d0ad8)
 
 # INTRODUCTION
 In this case study, we explore critical business questions to uncover key insights into a company's sales performance and customer dynamics. The analysis begins by determining foundational metrics such as the total number of orders, total sales amount, and the size of the customer base. We then shift focus to the sales agents, examining their contribution to the business by summarizing sales performance and identifying both the top-performing agent and those with lower order volumes.
@@ -29,7 +29,8 @@ This database consists of three tables.
 # Entity Relationship diagram
 
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/852e6ab1-d720-4f05-a6c2-16359132b328)
+![entity_relationship_diagram](https://github.com/user-attachments/assets/40a1b0a3-ef7d-45b7-b504-5a3e5c373281)
+
 
 # CASE STUDY QUESTIONS AND INSIGHTS
 
@@ -39,13 +40,15 @@ This database consists of three tables.
 
 The query counts the number of distinct order numbers (Ordnum) in the orders table and returns that count with the alias "Total_Order."
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/03aa9a98-359a-4da2-9622-0e71ed104cf0)
+![1](https://github.com/user-attachments/assets/1534bd30-4652-4776-9173-04b8753ca583)
+
 
 # 2. What is the total Sale Amount?
 
 This query calculates the total sum of the ordamount field from the orders table and returns the result with the alias "Total_SALE_AMOUNT."
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/185eb2c9-818f-4a29-82bd-4171f4d6ac98)
+
+![2](https://github.com/user-attachments/assets/609b52db-ee3f-4454-89c0-270d5c4ea449)
 
 
 # 3. How many Customers do we have onboard?
@@ -56,7 +59,8 @@ The query will count the number of non-null values in the custcode column from t
 
 • TOTAL_Customer: This gives the resulting count a label, so the result will be returned under the name "TOTAL_Customer."
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/a6039cbc-0921-4954-858d-0d2fd1b6a36b)
+![3](https://github.com/user-attachments/assets/23557d08-2e43-49f5-b314-03bf467d08a7)
+
 
 # 4. How many Agents do we have team?
 
@@ -66,7 +70,8 @@ The query will count the number of non-null values in the agentcode column from 
 
 • Total_Agents_Team: This gives the resulting count a label, so the result will be returned under the name "Total_Agents_Team."
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/d8e21d1a-f035-46c3-a676-07bfd4eaa008)
+![4](https://github.com/user-attachments/assets/92e6f984-ee8f-4c55-8902-b70ab8023e73)
+
 
 # B. Using Joins: (Get Data from Other Tables)
 
@@ -86,7 +91,8 @@ The query retrieves the name of the agent with the highest total sales amount by
 
 • LIMIT 1: Limits the output to show only the top-performing agent in terms of total sales.
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/fd354ae9-745e-4589-81d6-0ee30fda1f36)
+![5](https://github.com/user-attachments/assets/c3fa8133-48b8-418e-88f3-45e5561cc291)
+
 
 # 6. Can you summarize the Sales Amount by Agent Name? Which one is the Low Performing by Volume (Order Count)?
 
@@ -102,7 +108,7 @@ The query retrieves the name of each agent and the count of orders they are asso
 
 • ORDER BY ORDER_COUNT ASC: Orders the results by the number of orders in ascending order (lowest to highest).
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/fe219914-6f71-48eb-99f4-d060a5b4803e)
+![6](https://github.com/user-attachments/assets/69ded199-d592-44cb-a916-d9254582c5c1)
 
 
 # 7. Which Customer has the highest share in the Revenue for the Company? Brain Storm some Risk & Opportunities.
@@ -124,8 +130,7 @@ for each customer.
 
 • LIMIT 1: Limits the output to show only the top customer in terms of total revenue.
 
-
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/cf97dca6-6a73-40ae-af02-4552267f39c2)
+![7](https://github.com/user-attachments/assets/de7b5910-146d-4154-917d-dd59cc2a3393)
 
 
 # C. Level Up with Analytical Queries (Using Join Types)
@@ -143,7 +148,7 @@ The query retrieves the customer code and name for all customers who have not pl
 
 • WHERE orders.custcode is Null: Filters the results to only include customers who do not have any corresponding records in the orders table (i.e., customers who have not placed any orders).
 
-![image](https://github.com/UduakN/Data-Bank-DannyMa-SQL-Challenge-/assets/128192166/e4b309fe-f674-4808-88f8-36f37871802a)
+![8](https://github.com/user-attachments/assets/73ff2ffe-5993-44d9-98a3-45bf62d1949c)
 
 
 # 9. Which Agents have not referred a Single Customer Yet?
@@ -158,6 +163,7 @@ The query retrieves the agent code and name for all agents who have not referred
 
 • WHERE customers.agentcode is Null: Filters the results to only include agents who do not have any corresponding records in the customers table (i.e., agents who have not referred any customers).
 
+![9](https://github.com/user-attachments/assets/d6d82249-dbb9-4c00-8a5a-a0630e84a332)
 
 
 
